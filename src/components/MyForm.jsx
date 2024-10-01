@@ -1,6 +1,23 @@
-import React from "react";
+import { react, useState, useRef } from "react";
 
 function MyForm() {
+  const [formData, setFormData] = useState({
+    title: "",
+    dueDate: "",
+    priority: "",
+    status: "",
+    description: "",
+  });
+
+  let handleChange = (key, value) => {
+    setFormData((preFormData)=>({
+        ...preFormData,
+        [key]: value,
+      })
+      
+    );
+  };
+
   function submitTask() {
     console.log("form submitted");
   }
@@ -13,7 +30,12 @@ function MyForm() {
     <div>
       <form>
         <label htmlFor="taskTitle"> Title </label>
-        <input type="text" id="taskTitle" placeholder="Title of your Task" />
+        <input
+          type="text"
+          id="taskTitle"
+          onChange={handleChange}
+          placeholder="Title of your Task"
+        />
 
         <label htmlFor="taskDueDate"> Due Date </label>
         <input type="date" id="taskDueDate" />
