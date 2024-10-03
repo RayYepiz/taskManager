@@ -108,9 +108,7 @@ function MyForm() {
           Clear
         </button>
       </form>
-      {tasks.map((task) => {
-        <Task task={task} />;
-      })}
+      <Task tasks={tasks} />
       <h1>{JSON.stringify(tasks)}</h1>
     </div>
   );
