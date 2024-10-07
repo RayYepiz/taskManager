@@ -59,8 +59,8 @@ function MyForm() {
   };
 
   return (
-    <div>
-      <form onSubmit={submitTask}>
+    <div >
+      <form className="form" onSubmit={submitTask}>
         <label htmlFor="taskTitle"> Title </label>
         <input
           type="text"
@@ -68,6 +68,8 @@ function MyForm() {
           value={formData.title}
           onChange={handleChange}
           placeholder="Title of your Task"
+          required
+          minLength={3}
         />
 
         <label htmlFor="taskDueDate"> Due Date </label>
@@ -76,10 +78,16 @@ function MyForm() {
           id="dueDate"
           value={formData.dueDate}
           onChange={handleChange}
+          required
         />
 
         <label htmlFor="priority"> Priority </label>
-        <select id="priority" value={formData.priority} onChange={handleChange}>
+        <select
+          id="priority"
+          value={formData.priority}
+          required
+          onChange={handleChange}
+        >
           <option value="">Select a Priority</option>
           <option value="High">High</option>
           <option value="Medium">Medium</option>
@@ -87,7 +95,12 @@ function MyForm() {
         </select>
 
         <label htmlFor="status"> Status </label>
-        <select id="status" value={formData.status} onChange={handleChange}>
+        <select
+          id="status"
+          value={formData.status}
+          required
+          onChange={handleChange}
+        >
           <option value="">Select a Status</option>
           <option value="completed">Completed</option>
           <option value="working">Working</option>
@@ -99,6 +112,8 @@ function MyForm() {
           id="description"
           value={formData.description}
           onChange={handleChange}
+          placeholder="Place your description here."
+          required
         />
 
         <button type="submit" id="formSubmitBtn">
@@ -109,7 +124,6 @@ function MyForm() {
         </button>
       </form>
       <Task tasks={tasks} />
-      <h1>{JSON.stringify(tasks)}</h1>
     </div>
   );
 }

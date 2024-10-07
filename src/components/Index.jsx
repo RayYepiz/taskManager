@@ -5,11 +5,16 @@ import TaskSection from "./TaskSection";
 
 function index() {
   return (
-    <div>
-      <h1>hello world!</h1>
-      <HeroSection />
-      <Navigation />
-      <TaskSection />
+    <div className="wrapper">
+      <div className="heroSection">
+        <HeroSection />
+      </div>
+      <div>
+        <Navigation />
+      </div>
+      <div>
+        <TaskSection />
+      </div>
     </div>
   );
 }

@@ -1,0 +1,50 @@
+#root {
+    --primary-color: #742DBB;
+    --accent-color: #A2A0A0;
+    --black-color: #000000;
+    --off-black-color: #36454F;
+    --white-color: #ffffff;
+    --off-white-color: #F0EAD6;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroWrapper {
+    display: flex;
+}
+
+.heroSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 50vw;
+    padding: 20px;
+}
+
+.formSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 50vw;
+    padding: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+#title {
+    display: block;
+}
+
+
+
