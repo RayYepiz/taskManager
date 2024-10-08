@@ -15,16 +15,24 @@
 }
 
 .heroWrapper {
+    position: relative;
     display: flex;
+
 }
 
 .heroSide {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40vh;
     width: 50vw;
     padding: 20px;
+    background-color: var(--off-white-color);
+    font-size: 2em;
+}
+
+.mgmt {
+    display: block;
+    color: var(--primary-color);
 }
 
 .formSide {
@@ -32,9 +40,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 40vh;
     width: 50vw;
     padding: 20px;
+    background-color: var(--primary-color);
+}
+
+.formHeader {
+    color: var(--off-white-color);
 }
 
 .form {
