@@ -42,8 +42,17 @@
     flex-direction: column;
 }
 
-#title {
-    display: block;
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px
+}
+
+.form select, .form input, .form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    resize: none;
 }
 
 

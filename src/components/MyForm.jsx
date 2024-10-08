@@ -59,62 +59,72 @@ function MyForm() {
   };
 
   return (
-    <div >
+    <div>
       <form className="form" onSubmit={submitTask}>
-        <label htmlFor="taskTitle"> Title </label>
-        <input
-          type="text"
-          id="title"
-          value={formData.title}
-          onChange={handleChange}
-          placeholder="Title of your Task"
-          required
-          minLength={3}
-        />
+        <div className="formGroup">
+          <label htmlFor="taskTitle"> Title </label>
+          <input
+            type="text"
+            id="title"
+            value={formData.title}
+            onChange={handleChange}
+            placeholder="Title of your Task"
+            required
+            minLength={3}
+          />
+        </div>
 
-        <label htmlFor="taskDueDate"> Due Date </label>
-        <input
-          type="date"
-          id="dueDate"
-          value={formData.dueDate}
-          onChange={handleChange}
-          required
-        />
+        <div className="formGroup">
+          <label htmlFor="taskDueDate"> Due Date </label>
+          <input
+            type="date"
+            id="dueDate"
+            value={formData.dueDate}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-        <label htmlFor="priority"> Priority </label>
-        <select
-          id="priority"
-          value={formData.priority}
-          required
-          onChange={handleChange}
-        >
-          <option value="">Select a Priority</option>
-          <option value="High">High</option>
-          <option value="Medium">Medium</option>
-          <option value="Low">Low</option>
-        </select>
+        <div className="formGroup">
+          <label htmlFor="priority"> Priority </label>
+          <select
+            id="priority"
+            value={formData.priority}
+            required
+            onChange={handleChange}
+          >
+            <option value="">Select a Priority</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+        </div>
 
-        <label htmlFor="status"> Status </label>
-        <select
-          id="status"
-          value={formData.status}
-          required
-          onChange={handleChange}
-        >
-          <option value="">Select a Status</option>
-          <option value="completed">Completed</option>
-          <option value="working">Working</option>
-          <option value="notStarted">Not Started</option>
-        </select>
+        <div className="formGroup">
+          <label htmlFor="status"> Status </label>
+          <select
+            id="status"
+            value={formData.status}
+            required
+            onChange={handleChange}
+          >
+            <option value="">Select a Status</option>
+            <option value="completed">Completed</option>
+            <option value="working">Working</option>
+            <option value="notStarted">Not Started</option>
+          </select>
+        </div>
 
-        <label htmlFor="description"> Description </label>
-        <textarea
-          id="description"
-          value={formData.description}
-          onChange={handleChange}
-          placeholder="Place your description here."
-          required
-        />
+        <div className="formGroup">
+          <label htmlFor="description"> Description </label>
+          <textarea
+            id="description"
+            value={formData.description}
+            onChange={handleChange}
+            placeholder="Place your description here."
+            required
+          />
+        </div>
 
         <button type="submit" id="formSubmitBtn">
           Submit
