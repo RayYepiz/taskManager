@@ -6,11 +6,11 @@ function HeroSection() {
     <div className="heroWrapper">
       <div className="heroSide">
         <h1>
-          TASK <span>MANAGEMENT</span>
+          TASK <span className="mgmt">MANAGEMENT</span>
         </h1>
       </div>
       <div className="formSide">
-        <h1>NEW TASK</h1>
+        <h1 className="formHeader">NEW TASK</h1>
         <MyForm />
       </div>
     </div>
